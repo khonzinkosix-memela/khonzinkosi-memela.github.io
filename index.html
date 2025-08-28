@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Fortune - Numerology & Astrology</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Fortune</h1>
+            <p>Discover your destiny through numerology and astrology</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#numerology" class="active">Numerology</a></li>
+                <li><a href="#astrology">Western Astrology</a></li>
+                <li><a href="#chinese-zodiac">Chinese Zodiac</a></li>
+                <li><a href="#daily-horoscope">Daily Horoscope</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="numerology" class="section active">
+                <h2>Numerology Calculator</h2>
+                <div class="calculator">
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="birth-date">Birth Date:</label>
+                        <input type="date" id="birth-date">
+                    </div>
+                    <button id="calculate-numerology" class="btn">Calculate</button>
+                </div>
+                <div id="numerology-result" class="result-box hidden">
+                    <h3>Your Numerology Profile</h3>
+                    <div class="result-content">
+                        <div class="number-box">
+                            <span class="label">Life Path Number</span>
+                            <span id="life-path-number" class="number">-</span>
+                        </div>
+                        <div class="number-box">
+                            <span class="label">Destiny Number</span>
+                            <span id="destiny-number" class="number">-</span>
+                        </div>
+                        <div class="number-box">
+                            <span class="label">Soul Urge Number</span>
+                            <span id="soul-urge-number" class="number">-</span>
+                        </div>
+                        <div class="number-box">
+                            <span class="label">Personality Number</span>
+                            <span id="personality-number" class="number">-</span>
+                        </div>
+                    </div>
+                    <div id="numerology-interpretation"></div>
+                </div>
+            </section>
+
+            <section id="astrology" class="section">
+                <h2>Astrological Profile</h2>
+                <div class="calculator">
+                    <div class="form-group">
+                        <label for="birth-date-astro">Birth Date:</label>
+                        <input type="date" id="birth-date-astro">
+                    </div>
+                    <div class="form-group">
+                        <label for="birth-time">Birth Time (optional):</label>
+                        <input type="time" id="birth-time">
+                    </div>
+                    <button id="calculate-astrology" class="btn">Calculate</button>
+                </div>
+                <div id="astrology-result" class="result-box hidden">
+                    <h3>Your Astrological Profile</h3>
+                    <div class="result-content">
+                        <div class="sign-box">
+                            <span class="label">Sun Sign</span>
+                            <span id="sun-sign" class="sign">-</span>
+                        </div>
+                        <div class="sign-box">
+                            <span class="label">Moon Sign</span>
+                            <span id="moon-sign" class="sign">-</span>
+                        </div>
+                        <div class="sign-box">
+                            <span class="label">Rising Sign</span>
+                            <span id="rising-sign" class="sign">-</span>
+                        </div>
+                    </div>
+                    <div id="astrology-interpretation"></div>
+                </div>
+            </section>
+
+            <section id="chinese-zodiac" class="section">
+                <h2>Chinese Zodiac</h2>
+                <div class="calculator">
+                    <div class="form-group">
+                        <label for="birth-year-chinese">Birth Year:</label>
+                        <input type="number" id="birth-year-chinese" min="1900" max="2100" placeholder="Enter birth year">
+                    </div>
+                    <button id="calculate-chinese-zodiac" class="btn">Calculate</button>
+                </div>
+                <div id="chinese-zodiac-result" class="result-box hidden">
+                    <h3>Your Chinese Zodiac Sign</h3>
+                    <div class="result-content">
+                        <div class="sign-box">
+                            <span class="label">Animal Sign</span>
+                            <span id="chinese-animal-sign" class="sign">-</span>
+                        </div>
+                        <div class="sign-box">
+                            <span class="label">Element</span>
+                            <span id="chinese-element" class="sign">-</span>
+                        </div>
+                    </div>
+                    <div id="chinese-zodiac-interpretation"></div>
+                </div>
+            </section>
+
+            <section id="daily-horoscope" class="section">
+                <h2>Daily Horoscope</h2>
+                <div class="horoscope-selector">
+                    <label for="zodiac-sign">Select Your Zodiac Sign:</label>
+                    <select id="zodiac-sign">
+                        <option value="">Select your sign</option>
+                        <option value="aries">Aries (Mar 21 - Apr 19)</option>
+                        <option value="taurus">Taurus (Apr 20 - May 20)</option>
+                        <option value="gemini">Gemini (May 21 - Jun 20)</option>
+                        <option value="cancer">Cancer (Jun 21 - Jul 22)</option>
+                        <option value="leo">Leo (Jul 23 - Aug 22)</option>
+                        <option value="virgo">Virgo (Aug 23 - Sep 22)</option>
+                        <option value="libra">Libra (Sep 23 - Oct 22)</option>
+                        <option value="scorpio">Scorpio (Oct 23 - Nov 21)</option>
+                        <option value="sagittarius">Sagittarius (Nov 22 - Dec 21)</option>
+                        <option value="capricorn">Capricorn (Dec 22 - Jan 19)</option>
+                        <option value="aquarius">Aquarius (Jan 20 - Feb 18)</option>
+                        <option value="pisces">Pisces (Feb 19 - Mar 20)</option>
+                    </select>
+                    <button id="get-horoscope" class="btn">Get Horoscope</button>
+                </div>
+                <div id="horoscope-result" class="result-box hidden">
+                    <h3>Your Daily Horoscope</h3>
+                    <div class="date-display" id="horoscope-date"></div>
+                    <div id="horoscope-content"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Cosmic Fortune. All rights reserved.</p>
+            <p class="disclaimer">For entertainment purposes only.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
